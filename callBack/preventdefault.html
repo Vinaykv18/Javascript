@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prevent Default Example</title>
+  <script>
+    // Function to handle form submission
+    function handleSubmit(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Custom behavior
+      console.log("Form submission prevented!");
+    }
+
+    // Add event listener to the form
+    window.onload = function() {
+      const form = document.getElementById('myForm');
+      form.addEventListener('submit', handleSubmit);
+    }
+  </script>
+</head>
+<body>
+  <form id="myForm">
+    <input type="text" name="name" placeholder="Enter your name">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+
+<!-- preventdefault
+In JavaScript, the preventDefault method is used to prevent the default action that belongs to the event from being executed. This is particularly useful when you want to override default behaviors for certain elements like links, forms, or buttons. -->
+<!-- The handleSubmit function is called when the form is submitted.
+
+Inside the handleSubmit function, event.preventDefault() is called to prevent the form from being submitted in the traditional way (which would reload the page).
+
+You can then define any custom behavior you want to occur when the form is submitted without the page reloading. -->
+
+<!-- The handleClick function is called when the link is clicked.
+
+event.preventDefault() prevents the link from navigating to https://example.com.
+
+You can then define any custom behavior to occur instead of the default link navigation. -->
